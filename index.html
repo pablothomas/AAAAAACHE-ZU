@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app="nippel">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"></script>
+    <script src="http://www.youtube.com/player_api"></script>
+    <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="scripts.js"></script>
+  </head>
+  <body>
+    <div data-ng-controller="NippelCtrl">
+      <div style="display: inline-block; vertical-align:top; margin:20px;" data-ng-repeat="oneShit in allTheShit.data | filter:{type: 'video'}">
+          <button data-ng-click="playThatShit(oneShit)" style="width:250px; height:200px;">
+            <iframe width="200" height="150" data-ng-src="{{oneShit.videoLink}}" frameborder="0" allowfullscreen data-ng-show="oneShit.videoLink"></iframe>
+            <img data-ng-src="{{oneShit.picture}}" data-ng-hide="oneShit.videoLink">
+          </button>
+      </div>
+      
+    </div>
+  </body>
+</html>
