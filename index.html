@@ -11,9 +11,10 @@
     AECHE ZU
     <div data-ng-controller="NippelCtrl">
       <div style="display: inline-block; vertical-align:top; margin:20px;" data-ng-repeat="oneShit in allTheShit">
-          <button data-ng-click="playThatShit(oneShit)" style="width:250px; height:200px;"> 
-            <iframe width="200" height="150" data-ng-src="{{oneShit}}" frameborder="0" allowfullscreen data-ng-show="oneShit"></iframe>
-          </button>
+         <button data-ng-click="playThatShit(oneShit)" style="width:250px; height:200px;">
+     <!--   {{oneShit}} -->
+             <iframe class="youtube-player" type="text/html" width="270" height="150" style="max-width:100%;" src="{{oneShit}}" frameborder="0"></iframe>
+         </button>
       </div>
     </div>
   </body>

@@ -44,6 +44,7 @@ nipple.controller('NippelCtrl', function($scope, ShitService, $log) {
                     } else {
                           var lastUrl=  cleanUrl;
                     }
+                    // lastUrl = lastUrl + '?wmode=opaque';
                 $scope.allTheShit.push(lastUrl);
             }
 
