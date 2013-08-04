@@ -28,9 +28,9 @@ nipple.controller('NippelCtrl', function($scope, ShitService, $log) {
             var link = el.getElementsByTagName( 'a' )[0];
             var decodedLink = decodeURIComponent(link);
             if (decodedLink.indexOf("youtube") != -1) {
-                 var index = decodedLink.indexOf("http://localhost/l.php?u=");
-                var length = 'http://localhost/l.php?u=';
-                var cleanUrl = decodedLink.substring(index+length.length);
+                 var index = decodedLink.lastIndexOf("l.php?u=");
+                var length = '.l.php?u=';
+                var cleanUrl = decodedLink.substring(index+length.length-1);
                     $log.log("clean: " + cleanUrl);
                     if (cleanUrl.indexOf("embed") == -1) {
                         if (cleanUrl.indexOf("https") == -1) {
